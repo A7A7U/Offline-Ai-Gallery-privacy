@@ -24,7 +24,7 @@ The App requires the following permissions to function:
 
 | Permission | Purpose |
 |------------|---------|
-| **Storage Access** | Browse, organize, and manage your photos, videos, and audio files |
+| **All Files Access (MANAGE_EXTERNAL_STORAGE)** | Access and manage ALL media files across your device, including folders from WhatsApp, Telegram, Downloads, and custom camera apps. Required for comprehensive folder discovery, cross-directory file management, custom albums, and duplicate detection. |
 | **Camera** | Capture new photos and videos (optional) |
 | **Microphone** | Voice search, voice commands, and audio recording |
 | **Biometric/Fingerprint** | Optional app lock and secure vault authentication |
@@ -90,10 +90,16 @@ AI Gallery implements robust security measures to protect your sensitive data:
 ### Services NOT Used
 
 We do **not** use any:
-- Analytics or tracking services
-- Advertising networks
+- Analytics or user behavior tracking services
 - Cloud storage services for your personal data
 - Data brokers or data selling services
+
+### Advertising
+
+The app may display advertisements for monetization purposes. However:
+- Advertisers do NOT have access to your photos, videos, or personal files
+- Your media files are NEVER shared with advertising networks
+- All AI processing remains 100% local regardless of ads
 
 ---
 
