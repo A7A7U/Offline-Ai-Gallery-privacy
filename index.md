@@ -1,6 +1,6 @@
 # Privacy Policy for Offline AI Gallery
 
-**Last Updated: January 6, 2026**
+**Last Updated: July 31, 2026**
 
 ---
 
@@ -28,9 +28,10 @@ The App requires the following permissions to function:
 | **Camera** | Capture new photos and videos (optional) |
 | **Microphone** | Voice search, voice commands, and audio recording |
 | **Biometric/Fingerprint** | Optional app lock and secure vault authentication |
-| **Internet** | Download AI models for speech recognition (optional, user-initiated) |
+| **Internet** | Download AI models, serve ads (free tier), verify Pro purchases, and optional user-initiated features |
 | **Notifications** | Notify you when background AI analysis is complete |
 | **Foreground Service** | Run AI processing in background |
+| **Advertising ID (AD_ID)** | Used by Google AdMob to serve and measure ads in the free version of the App |
 
 ### 2. On-Device AI Processing
 
@@ -61,6 +62,7 @@ The App stores the following data **locally on your device only**:
 - App settings and preferences (using SharedPreferences)
 - Vault-protected files (encrypted with AES-256 encryption)
 - PIN codes and authentication settings (stored in secure encrypted storage)
+- Pro purchase status (cached locally after Google Play verification)
 
 ---
 
@@ -86,42 +88,55 @@ Offline AI Gallery implements robust security measures to protect your sensitive
 | Google ML Kit | On-device image analysis and OCR | **None** - all processing is local |
 | FFmpeg | Video/audio processing and filters | **None** - all processing is local |
 | Tesseract OCR | Text recognition in images | **None** - all processing is local |
+| **Google AdMob** | Display ads in the free version | Device advertising ID, IP address, app interaction data (no photos/videos/audio) |
+| **AppLovin** (via AdMob mediation) | Additional ad inventory | Same as AdMob — no personal media |
+| **Unity Ads** (via AdMob mediation) | Additional ad inventory | Same as AdMob — no personal media |
+| **Firebase Crashlytics** | Anonymous crash reports to improve stability | Device model, OS version, stack traces (no photos, chat, or personal content) |
+| **Google Play Billing** | Pro purchase and subscription verification | Purchase tokens via Google Play (no personal media) |
 
-### Services NOT Used
+### What We Do NOT Do
 
-We do **not** use any:
-- Analytics or user behavior tracking services
-- Cloud storage services for your personal data
-- Data brokers or data selling services
+- We do **not** upload your photos, videos, or audio to any server
+- We do **not** sell your personal data
+- We do **not** use cloud AI models for your content
+- We do **not** share your media files with advertisers
 
-### Advertising
+### Advertising (Free Version)
 
-The app may display advertisements for monetization purposes. However:
-- Advertisers do NOT have access to your photos, videos, or personal files
-- Your media files are NEVER shared with advertising networks
+The free version of the App displays advertisements through Google AdMob and its mediation partners (AppLovin, Unity Ads):
+
+- Advertisers do **NOT** have access to your photos, videos, or personal files
+- Your media files are **NEVER** shared with advertising networks
 - All AI processing remains 100% local regardless of ads
+- You can remove ads by purchasing **Ai-Gallery Pro** (monthly subscription or lifetime one-time purchase)
+- In the European Economic Area (EEA), UK, and Switzerland, we use Google's User Messaging Platform (UMP) to obtain your consent before serving personalized ads. You can change your ad privacy preferences at any time in **Settings → How we protect your privacy → Ad Privacy Preferences**
 
 ---
 
 ## Data Sharing
 
-**We do not share your personal data with anyone.** 
+**We do not share your personal media with anyone.**
 
 - Your photos, videos, and audio files never leave your device
 - AI analysis results are stored locally and never transmitted
-- We do not sell, rent, or share your data with third parties
+- We do not sell, rent, or share your personal media with third parties
+
+Third-party SDKs listed above may collect limited technical data (device type, advertising ID, crash logs) as described in their respective privacy policies:
+- [Google Privacy Policy](https://policies.google.com/privacy)
+- [AppLovin Privacy Policy](https://www.applovin.com/privacy/)
+- [Unity Privacy Policy](https://unity.com/legal/privacy-policy)
 
 ---
 
 ## Children's Privacy
 
-Offline AI Gallery does not knowingly collect personal information from children under 13 years of age. Since all data processing happens locally on the device and we do not collect any personal information from users, the App is suitable for users of all ages with parental supervision.
+This App is intended for a general audience and is **not directed at children under 13**. We do not knowingly collect personal information from children. If you believe a child has provided us information, please contact us and we will delete it.
 
 ---
 
 ## Your Rights and Control
 
-Since all data stays on your device, you have complete control:
+Since all media data stays on your device, you have complete control:
 
 | Right | How to Exercise |
 |-------|-----------------|
@@ -130,6 +145,8 @@ Since all data stays on your device, you have complete control:
 | **Export** | Share or export files using the system share feature |
 | **Vault Access** | Move files in/out of the encrypted vault at any time |
 | **Disable AI** | Turn off AI analysis in Settings at any time |
+| **Ad Preferences** | Modify or revoke ad personalization consent in Settings → Ad Privacy Preferences |
+| **Remove Ads** | Purchase Ai-Gallery Pro or restore a previous purchase |
 
 ---
 
@@ -137,7 +154,8 @@ Since all data stays on your device, you have complete control:
 
 - **On-device data**: Retained until you delete it or uninstall the App
 - **AI models**: Stored locally until you delete them or uninstall the App
-- **No cloud retention**: We have no servers that store your personal data
+- **Crash reports**: Retained by Firebase per Google's retention policy (typically 90 days)
+- **No cloud retention of your media**: We have no servers that store your personal files
 
 ---
 
@@ -163,12 +181,14 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 | Question | Answer |
 |----------|--------|
-| Do you upload my photos? | ❌ No, never |
-| Is AI processing local? | ✅ Yes, 100% on-device |
-| Do you use analytics? | ❌ No tracking whatsoever |
-| Is my data sold? | ❌ Never |
-| Can I delete my data? | ✅ Yes, full control |
-| Is my vault secure? | ✅ Yes, AES-256 encrypted |
+| Do you upload my photos? | No, never |
+| Is AI processing local? | Yes, 100% on-device |
+| Do you use analytics? | Crashlytics only (anonymous crashes, no personal content) |
+| Do you show ads? | Yes, in the free version via AdMob (removable with Pro) |
+| Is my data sold? | Never |
+| Can I delete my data? | Yes, full control |
+| Is my vault secure? | Yes, AES-256 encrypted |
+| Can I opt out of personalized ads? | Yes, via Ad Privacy Preferences in Settings |
 
 ---
 
